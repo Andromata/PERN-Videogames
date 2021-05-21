@@ -1,0 +1,28 @@
+.navBar {
+  background: rgb(138, 43, 226);
+  background: linear-gradient(149deg, #2be2d1 0%, #282828 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 100px;
+  .logo {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 40px;
+      color: #282828;
+    }
+    h3 {
+      font-family: "Lexend", sans-serif;
+      font-size: 30px;
+      margin-left: 10px;
+      color: #282828;
+    }
+  }
+  .btn-search {
+    height: 28px;
+  }
+}

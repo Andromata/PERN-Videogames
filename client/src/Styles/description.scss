@@ -1,0 +1,106 @@
+.page-container{
+  background-color: #282828;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  
+  .top {
+    z-index: 1001;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    .rat {
+      position: absolute;
+      background-color: blueviolet;
+      border-radius: 10px;
+      width: 100px;
+      right: 20px;
+      top: 180px;
+      text-align: center;
+
+      h3{
+
+    font-family: 'Lexend', sans-serif;
+   font-weight: 400;
+      };
+      h2{
+        font-family: 'Lexend', sans-serif;
+      }
+  }
+    .button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .data{
+      width: 700px;
+      .name {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 70px;
+        margin-left: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.detail-background {
+  position: fixed;
+  width: 850px;
+  height: 500px;
+  z-index: 400;
+  top: 100px;
+  left: 200px;
+  border-radius: 20px;
+  background-size: cover;
+  filter: blur(0.95);
+  opacity: 0.9;
+}
+hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+.close {
+  background-color: blueviolet;
+  border-radius: 5px;
+  width: 30px;
+  border: none;
+  height: 30px;
+}
+.container-detail {
+  position: absolute;
+  width: 1000px;
+  z-index: 1000;
+  top: 80px;
+  left: 12%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.bottom {
+  .inf {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+}
+  h1{
+    color:blueviolet;
+    font-family: 'Lexend', sans-serif;
+  }
+  h3{
+    color:blueviolet;
+    font-family: 'Lexend', sans-serif;
+  }
+  p {
+    color: black;
+    font-family: 'Lexend', sans-serif;
+  }
+}

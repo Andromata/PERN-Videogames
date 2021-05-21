@@ -1,0 +1,43 @@
+.selectors {
+  display: flex;
+  justify-content: center;
+
+  .selectors-container {
+    display: flex;
+    justify-content: center;
+    background-color: #2bc7b9;
+    padding: 6px;
+    margin-top: 20px;
+    .selects {
+      display: flex;
+      justify-content: space-between;
+      width: 342px;
+
+      .filter-select {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 4px;
+        transition: .3s ease-in-out;
+        width: 169px;
+      }
+      
+    }
+    .filters {
+      display: flex;
+      margin: 0px 2px;
+      .filter-btn {
+        height: 35px;
+        width: 47px;
+        margin: 0px 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .search {
+      .btn-search {
+        height: 35px;
+      }
+    }
+  }
+}
