@@ -21,7 +21,7 @@
 const { default: axios } = require('axios');
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { Genres, Platforms } = conn.models;
+const { Genre, Platform } = conn.models;
 const { PORT, APYKEY } = require('./utils/config/index')
 
 const getGenres = async () => {
@@ -29,7 +29,7 @@ const getGenres = async () => {
    let allGenres = await axios.get(`https://api.rawg.io/api/genres?key=${APYKEY}`)
 
     allGenres.data.results.forEach(elm => {
-      Genres.findOrCreate({
+      Genre.findOrCreate({
         where: {
           name: elm.name
         }
@@ -45,7 +45,7 @@ const getPlatforms = async () => {
   try {
     platforms = await axios.get(`https://api.rawg.io/api/platforms?key=${APYKEY}`)
     platforms.data.results.forEach(elm => {
-      Platforms.findOrCreate({
+      Platform.findOrCreate({
         where: {
           name: elm.name
         }

@@ -1,13 +1,11 @@
 const { DataTypes } = require('sequelize');
 
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
-  // defino el modelo
-  sequelize.define('videogames', {
+  return sequelize.define('videogame', {
     id: {
-      primaryKey: true,
       type: DataTypes.UUID,
+      primaryKey: true,
+      allowNull:false,
     },
     name: {
       type: DataTypes.STRING,
@@ -30,21 +28,6 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: true
     }
-    // nameUrl:{
-    //   type: DataTypes.STRING
-    // },
-    // route:{
-    //   type: DataTypes.VIRTUAL,
-    //   get(){
-    //       return '/pages/' + this.getDataValue('nameUrl');
-    //     }
-    //   },
-    // gmid:{
-    //   type: DataTypes.VIRTUAL,
-    //   get(){
-    //     return "gm" + this.getDataValue('id')
-    //   }
-    // }
   });
 
 
