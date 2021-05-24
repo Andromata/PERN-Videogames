@@ -1,13 +1,13 @@
 .selectors {
   display: flex;
-  justify-content: center;
+justify-content: end;
 
   .selectors-container {
     display: flex;
-    justify-content: center;
-    background-color: #2bc7b9;
+    background-color: #000;
     padding: 6px;
     margin-top: 20px;
+    width: 60%;
     .selects {
       display: flex;
       justify-content: space-between;

@@ -1,8 +1,10 @@
 .release-container{
     width: 300px;
-    height: 500px;
-    background-color: antiquewhite;
+    height: 100%;
+    background-color: black;
     margin-left: 30px;
+    margin-top: 105px;
+    
 
     .release-header{
         background-color: black;
@@ -12,5 +14,55 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: "Lexend", sans-serif;
     }
+    .release-body{
+        .relasedgamecontainer{
+            .realeasedimg {
+                position: relative;
+                overflow: hidden;
+            }
+            .realeasedimg img {
+                display: block;
+                max-width: 100%;
+                line-height: 0;
+                border-radius: 0px;
+                height: 70px;
+                transition: 250ms ease;
+            }
+            .realeasedimg p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                z-index: 2;
+                text-align: center;
+                transition: 250ms ease;
+                font-family: "Lexend", sans-serif;
+            }
+            .realeasedimg:hover img {
+                opacity: 0.6;
+            }
+            .realeasedimg:hover p {
+                opacity: 1;
+            }
+            .realeasedimg:after {
+                width:100%;
+                content:'';
+                display:block;
+                position:absolute;
+                top:0;
+                left:0;
+                background: linear-gradient(to right, rgb(0, 10, 9) 0%,rgba(255,255,255,0) 35%);
+                height:100%;
+              }
+        }
+    }
+}
+
+.release-body{
+    scrollbar-width: none;
+height: 700px;
+overflow-y: scroll;
 }

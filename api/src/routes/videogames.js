@@ -1,18 +1,18 @@
 const { Router } = require("express");
-const axios = require("axios");
 const router = Router();
 require("dotenv").config();
+const axios = require("axios");
 const { APY_KEY } = process.env;
 const { Genres, Platforms, Videogames } = require("../db");
 const { v4: uuidv4 } = require("uuid");
 const { Sequelize, Op } = require("sequelize");
 
-router.get('./released', async (req, res) => {
+router.get('/released', async (req, res) => {
 try {
-  const lastReleased = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&ordering=released`)
-  res.status(200).json(lastReleased)
+  const lastReleased = await axios.get(`https://api.rawg.io/api/games?key=${APY_KEY}&ordering=released`)
+  res.status(200).json(lastReleased.data)
 } catch (error) {
-  
+ console.error(error) 
 }
 })
 

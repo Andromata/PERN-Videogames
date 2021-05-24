@@ -5,7 +5,7 @@ const NavBar = () => {
     <Fragment>
       <div className="navBar">
         <div className="logo">
-          <i class="fas fa-spider"></i>
+          <i className="fas fa-spider"></i>
           <h3>VGWEB</h3>
         </div>
       </div>

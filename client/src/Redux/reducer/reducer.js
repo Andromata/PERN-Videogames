@@ -5,7 +5,7 @@ const initialState = {
   platforms: [],
   loading: false,
   currentPage: 1,
-  videogamesPerPage: 20,
+  videogamesPerPage: 15,
   filters: {
     order: "",
     origen: "",

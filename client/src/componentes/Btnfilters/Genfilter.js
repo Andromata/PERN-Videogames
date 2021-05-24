@@ -21,7 +21,7 @@ const Genfilter = () => {
           value={optionGenre}
           onChange={(e) => dispatch(filterGenre(e.target.value))}
         >
-          <option value="" disabled selected>
+          <option value="" disabled>
             Genre
           </option>
           <option value="all">All</option>
@@ -35,8 +35,8 @@ const Genfilter = () => {
           value={optionPlatform}
           onChange={(e) => dispatch(filterPlatform(e.target.value))}
         >
-          <option value="" disabled selected>
-            Platform
+          <option value="" disabled>
+            Platforms
           </option>
           <option value="all">All</option>
           {platforms.map((platform) => {

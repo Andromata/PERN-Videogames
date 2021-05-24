@@ -16,7 +16,7 @@ const Card = ({ juego }) => {
               <span>{juego.released}</span>
             </div>
             <div className="streamers">
-              {juego.platforms.map((g, index) => {
+              {juego.platforms.forEach((g, index) => {
                 if (index < 3) {
                   if (g.name === "PC") {
                     const icon = "fas fa-desktop";
@@ -47,7 +47,7 @@ const Card = ({ juego }) => {
         <div className="back">
           <div className="game-info">
             <div className="genres">
-              {juego.genres.map((g, index) => {
+              {juego.genres.forEach((g, index) => {
                while (index < 3) return <div className="genre">{g.name} </div>;
               })}
             </div>

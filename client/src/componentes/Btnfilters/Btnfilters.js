@@ -11,25 +11,25 @@ const Btnfilters = () => {
             className="filter-btn"
             onClick={() => dispatch(filterOrder("az"))}
           >
-            <i class="fas fa-sort-alpha-down"></i>
+            <i className="fas fa-sort-alpha-down"></i>
           </button>
           <button
             className="filter-btn"
             onClick={() => dispatch(filterOrder("za"))}
           >
-            <i class="fas fa-sort-alpha-down-alt"></i>
+            <i className="fas fa-sort-alpha-down-alt"></i>
           </button>
           <button
             className="filter-btn"
             onClick={() => dispatch(filterOrder("asc"))}
           >
-            <i class="fas fa-star"></i> ↑
+            <i className="fas fa-star"></i> ↑
           </button>
           <button
             className="filter-btn"
             onClick={() => dispatch(filterOrder("des"))}
           >
-            <i class="fas fa-star"></i> ↓
+            <i className="fas fa-star"></i> ↓
           </button>
         </div>
     </Fragment>
