@@ -2,7 +2,7 @@ const { Router } = require("express");
 const router = Router();
 const { Genres } = require("../db");
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   try {
     Genres.findAll({
       attributes: ["id", "name"],

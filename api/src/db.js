@@ -1,10 +1,9 @@
-require('dotenv').config(); 
 const {Sequelize} = require('sequelize'); 
 const fs = require('fs'); 
 const path = require('path'); 
-const {  DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env; 
+const { dbName, dbHost, dbPassword, dbUser } = require('../utils/config/index')
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, {
+const sequelize = new Sequelize(`postgres://${dbUser}:${dbPassword}@${dbHost}/${dbName}`, {
   logging: false, 
   native: false, 
 });

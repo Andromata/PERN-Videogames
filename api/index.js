@@ -22,14 +22,11 @@ const { default: axios } = require('axios');
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const { Genres, Platforms } = conn.models;
-
-//APIKEY
-require('dotenv').config();
-const { APY_KEY } = process.env;
+const { PORT, APYKEY } = require('./utils/config/index')
 
 const getGenres = async () => {
   try {
-   let allGenres = await axios.get(`https://api.rawg.io/api/genres?key=${APY_KEY}`)
+   let allGenres = await axios.get(`https://api.rawg.io/api/genres?key=${APYKEY}`)
 
     allGenres.data.results.forEach(elm => {
       Genres.findOrCreate({
@@ -46,7 +43,7 @@ const getGenres = async () => {
 
 const getPlatforms = async () => {
   try {
-    platforms = await axios.get(`https://api.rawg.io/api/platforms?key=${APY_KEY}`)
+    platforms = await axios.get(`https://api.rawg.io/api/platforms?key=${APYKEY}`)
     platforms.data.results.forEach(elm => {
       Platforms.findOrCreate({
         where: {
@@ -61,8 +58,8 @@ const getPlatforms = async () => {
 };
 
 conn.sync({ truncate: null }).then(() => {
-  server.listen(3001, () => {
-    console.log('%s listening at 3001'); 
+  server.listen(PORT, () => {
+    console.log(`listening at port ${PORT}`); 
   });
   
   getGenres();
